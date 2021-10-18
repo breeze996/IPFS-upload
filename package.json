@@ -1,0 +1,65 @@
+{
+  "name": "HIPPO-NFT-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node -r ts-node/register --inspect ./src/index.ts",
+    "dev": "nodemon",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint:fix": "tslint -p . --fix",
+    "format": "prettier \"src/**/*.ts\" -l \"warn\"",
+    "format:fix": "prettier --write \"src/**/*.ts\" -l \"warn\"",
+    "format:lint:fix": "prettier --write \"src/**/*.ts\" -l \"warn\" && npm run lint:fix"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "typescript",
+    "express",
+    "expressjs",
+    "server",
+    "http-server"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^7.0.0",
+    "errorhandler": "^1.5.0",
+    "express": "^4.17.0",
+    "express-joi-validation": "^0.3.0",
+    "helmet": "^3.16.0",
+    "ipfs-core": "^0.11.1",
+    "ipfs-http-client": "^53.0.1",
+    "joi": "^14.3.1",
+    "multer": "^1.4.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/compression": "0.0.36",
+    "@types/cors": "^2.8.12",
+    "@types/debug": "^4.1.4",
+    "@types/dotenv": "^6.1.1",
+    "@types/errorhandler": "0.0.32",
+    "@types/express": "^4.16.1",
+    "@types/helmet": "0.0.43",
+    "@types/joi": "^14.3.3",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^11.13.7",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "nodemon": "^1.18.11",
+    "prettier": "^1.17.0",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
