@@ -26,7 +26,7 @@ export class CommonController {
     }
   }
   /**
-   * POST upload work info to ipfs
+   * POST upload JSON data to ipfs
    * POST /api/common/addJSONToIPFS
    */
   public addJSONToIPFS = async (req: Request, res: Response, next: NextFunction) => {
