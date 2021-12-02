@@ -13,7 +13,7 @@ export class Env {
 
     // if file `.env.local` => override config from `.env` base configuration file
     try {
-      const prodEnvConfig = dotenv.parse(fs.readFileSync('.env.local'))
+      const prodEnvConfig = dotenv.parse(fs.readFileSync('.env'))
       for (const envSetting in prodEnvConfig) {
         process.env[envSetting] = prodEnvConfig[envSetting]
       }
