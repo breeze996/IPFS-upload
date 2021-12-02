@@ -28,14 +28,14 @@ export class ErrorHandling {
     if (isValidatorError) return this.handleValidatorErrors(err, req, res, next)
 
     const host = req.get('host')
-    const url = req.protocol + '://' + host + req.url
-    const status = err.status || 500
+    const url = req?.protocol + '://' + host + req.url
+    const status = err?.status || 500
     const errMsg = {
-      status: !err.status && err.message ? 400 : status,
-      stack: err.stack,
-      code: err.code || (err.err && err.err.errorIdentifier),
-      message: err.message || err.err.message,
-      type: err.type,
+      status: !err?.status && err?.message ? 400 : status,
+      stack: err?.stack,
+      code: err?.code || (err?.err && err?.err?.errorIdentifier),
+      message: err?.message || err?.err?.message,
+      type: err?.type,
       url,
     }
 
@@ -47,17 +47,17 @@ export class ErrorHandling {
     const isValidatorError = err && err.error && err.error.isJoi
     if (isValidatorError) return this.handleValidatorErrors(err, req, res, next)
 
-    const status = err.status || 500
+    const status = err?.status || 500
     const errMsg = {
-      status: !err.status && err.message ? 400 : status,
-      code: err.code || (err.err && err.err.errorIdentifier),
-      message: err.message || err.err.message,
-      type: err.type,
+      status: !err?.status && err?.message ? 400 : status,
+      code: err?.code || (err?.err && err?.err?.errorIdentifier),
+      message: err?.message || err?.err?.message,
+      type: err?.type,
     }
 
     return res.status(errMsg.status).json(errMsg)
   }
-
+  // interim
   public static handleValidatorErrors(
     err: any,
     req: Request,
@@ -66,9 +66,9 @@ export class ErrorHandling {
   ): Response {
     const errMsg: IErrorResponse = {
       status: 400,
-      type: err.type,
-      message: `${err.type} params validation error`,
-      detail: err.error && err.error.details,
+      type: err?.type,
+      message: `${err?.type} params validation error`,
+      detail: err?.error && err.error.details,
     }
 
     if (err && err.code) {
