@@ -1,23 +1,3 @@
-# Express TypeScript API Boilerplate
-
-Simple Express API boilerplate built with TypeScript.
-
-### Motivation
-
-Main goal was to create a boilerplate for NodeJS projects built with TypeScript without having to spend long hours to setup development tools, build, linting and formatting tasks.
-
-### Technologies and Packages used
-
-TypeScript, ES6, Express, TSLint, Dotenv, Prettier, Joi, Nodemon
-
-### Installation
-
-```
-git clone git@github.com:jbutko/express-ts-api-boilerplate.git
-cd express-ts-api-boilerplate
-yarn install // or npm install
-```
-
 ### Scripts
 
 `yarn run dev`
